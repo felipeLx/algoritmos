@@ -33,3 +33,21 @@ class Solution:
                 return val[0]
         
         return -1
+
+# let code - two sum
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for idx, num in enumerate(nums):
+            if target - num in d:
+                return [d[target - num], idx]
+            d[num] = idx
+        return []
+
+class Solution2:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hasher = {}
+        for idx, num in enumerate(nums):
+            if hasher.get(num) is not None:
+                return [hasher.get(num), idx]
+            hasher[target - num] = idx

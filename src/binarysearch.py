@@ -1,5 +1,8 @@
 # binary search
 # temporal O(log n)
+"""
+Quando dobramos o input aumentamos apenas uma unidade de tempo
+"""
 # spatial O(1)
 def binary_search(nums, n):
     lo = 0
