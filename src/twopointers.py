@@ -14,3 +14,13 @@ class Solution:
         res += ' '
         res += s[l:r + 2][::-1]
         return res[1:]
+
+# let code: two pointers: valid palindrome
+"""
+A phrase is a palindrome if it reads the same backward as forward. For example, "madam" is a palindrome.
+Write a function that takes a string as input and returns True if the string is a palindrome and False if it is not.
+"""
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = ''.join(filter(str.isalnum, s)).lower()
+        return s == s[::-1]
